@@ -1,0 +1,68 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Nature Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">The Beauty of Nature</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p>@@DhruviGandhi</p>
+    <p>You can reach out to me at W0781089@@myscc.ca</p>
+</div>
+
+@{
+     var quote = "Leave the road, take the trails. —Pythagoras";
+    <div>@quote</div>
+}<br>
+@{
+    quote = "Colors are the smiles of nature. —Leigh Hunt";
+<br>
+<div>@quote</div>
+}
+@{
+    quote = "Everything in nature invites us constantly to be what we are. —Gretel Ehrlich";
+<br>
+<div>@quote</div>
+}
+<br>
+@{
+    var natureElements = new [] {
+        new {
+            name = "Land",
+            Use = "Resident, Commercial, Agriculture",
+            example = "Coastal Land, Forest Land, Water Resource",
+        },
+        
+        new {
+            name = "Plants & Flowers",
+            Use = "Oxygen, Food, Medicine, Pollination, Feed Insects and birds",
+            example = "Spinach, Chamoline, Sunflower, Rose",
+        },
+        new {
+            name = "Rivers",
+            Use = "water supply, international borders and harbors, Drinking water",
+            example = "Mississippi, Thames, The Nile River",
+        }, 
+        new {
+            name = "Mountains",
+            Use = "Habitat to Plants, Animals, Humans",
+            example = "Mt.Everest, Mt.Fugi, Denali"
+        },
+        new {
+            name = "Waterfalls",
+            Use = "Purification of Water",
+            example = "Niagara Falls, Victoria Falls"
+        }
+    };
+}
+
+@for (var i = 0; i < natureElements.Length; i++)
+{
+    var nature = natureElements[i];
+    <text><strong>Nature Element: @nature.name</strong> <br></text>
+    <text>Benefits: @nature.Use <br></text>
+    <text>Type: @nature.example <br></text>
+<br>
+}
+
