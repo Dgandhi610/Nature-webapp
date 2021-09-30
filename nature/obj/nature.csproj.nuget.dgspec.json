@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dhrits\\OneDrive\\Desktop\\Nature webapp\\nature\\nature.csproj": {}
+    "C:\\Users\\dhrits\\OneDrive\\Desktop\\asp.net\\Nature webapp\\nature\\nature.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dhrits\\OneDrive\\Desktop\\Nature webapp\\nature\\nature.csproj": {
+    "C:\\Users\\dhrits\\OneDrive\\Desktop\\asp.net\\Nature webapp\\nature\\nature.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dhrits\\OneDrive\\Desktop\\Nature webapp\\nature\\nature.csproj",
+        "projectUniqueName": "C:\\Users\\dhrits\\OneDrive\\Desktop\\asp.net\\Nature webapp\\nature\\nature.csproj",
         "projectName": "nature",
-        "projectPath": "C:\\Users\\dhrits\\OneDrive\\Desktop\\Nature webapp\\nature\\nature.csproj",
+        "projectPath": "C:\\Users\\dhrits\\OneDrive\\Desktop\\asp.net\\Nature webapp\\nature\\nature.csproj",
         "packagesPath": "C:\\Users\\dhrits\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dhrits\\OneDrive\\Desktop\\Nature webapp\\nature\\obj\\",
+        "outputPath": "C:\\Users\\dhrits\\OneDrive\\Desktop\\asp.net\\Nature webapp\\nature\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dhrits\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -37,6 +37,22 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SQLite": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

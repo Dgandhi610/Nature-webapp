@@ -1,0 +1,54 @@
+@page
+@model nature.Pages_Natures.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.natureProgramme[0].name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.natureProgramme[0].PowerAcquisitionDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.natureProgramme[0].Use)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.natureProgramme[0].example)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.natureProgramme) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PowerAcquisitionDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Use)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.example)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
